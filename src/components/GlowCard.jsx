@@ -30,7 +30,7 @@ const GlowCard = ({ card, children, index }) => {
         <h1 className="font-semibold text-4xl">{card.company}</h1>
         {/* <p className="text-white-50 text-lg">{card.review}</p> */}
       </div>
-      {children}
+      {/* {children} */}
     </div>
   );
 };

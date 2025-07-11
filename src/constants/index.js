@@ -89,15 +89,19 @@ const abilities = [
 const techStackImgs = [
   {
     name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    imgPath: "/images/logos/reactjs.png",
   },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
+  // {
+  //   name: "Python Developer",
+  //   imgPath: "/images/logos/python.svg",
+  // },
   {
     name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
+    imgPath: "/images/logos/nodejs.png",
+  },
+  {
+    name: "Flutter Developer",
+    imgPath: "/images/logos/flutter.png",
   },
   {
     name: "Interactive Developer",

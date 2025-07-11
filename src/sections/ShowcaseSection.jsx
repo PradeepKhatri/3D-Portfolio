@@ -13,7 +13,11 @@ const ShowcaseSection = () => {
   const project3Ref = useRef(null);
 
   useGSAP(() => {
-    const projects = [project1Ref.current, project2Ref.current, project3Ref.current];
+    const projects = [
+      project1Ref.current,
+      project2Ref.current,
+      project3Ref.current,
+    ];
 
     projects.forEach((project, index) => {
       gsap.fromTo(
@@ -45,18 +49,18 @@ const ShowcaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <TitleHeader title="Personal Work" sub="Hands-on projects"/>
+        <TitleHeader title="Personal Work" sub="Hands-on projects" />
         <div className="showcaselayout mt-20">
           {/* Left */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1_rag.png" alt="ryde" />
+              <img src="/images/jobPortall.png" alt="ryde" />
             </div>
             <div className="text-content">
-              <h2>On-Demand Rides made simple with a App called Ryde</h2>
+              <h2>RAG based QABOT</h2>
               <p className="text-white-50md:text-xl">
-                An app built with React Native, Expo and Tailwind CSS for a
-                fast, user-friendly experience.
+                A conversational retrieval chain to answer
+                users questions about the PDFs.
               </p>
             </div>
           </div>
@@ -66,19 +70,22 @@ const ShowcaseSection = () => {
             className="project-list-wrapper overflow-hidden"
             ref={project2Ref}
           >
-            <div className="project">
-              <div className="image-wrapper bg-[#ffebdf]">
-                <img src="/images/project2.png" alt="project2" />
-              </div>
-              <h2>Library Management Platform</h2>
-            </div>
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="project3" />
+                <img src="/images/jobPortal.png" alt="project3" className="w-full h-full"/>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Hiredd - A Job Portal</h2>
             </div>
+
+            <div className="project">
+              <div className="image-wrapper bg-[#ffebdf]">
+                <img src="/images/expenseTracker.png" alt="project2" className="object-cover"/>
+              </div>
+              <h2>Expense Tracker</h2>
+            </div>
+
+            
           </div>
         </div>
       </div>

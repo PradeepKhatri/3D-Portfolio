@@ -69,7 +69,7 @@ const Hero = () => {
         </header>
 
         {/* Right Section Model */}
-        <figure className="">
+        <figure>
           <div className="hero-3d-layout">
             <HeroExperience />
           </div>
