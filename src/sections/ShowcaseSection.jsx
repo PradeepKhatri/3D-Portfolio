@@ -13,37 +13,37 @@ const ShowcaseSection = () => {
   const project3Ref = useRef(null);
 
   useGSAP(() => {
-    const projects = [
-      project1Ref.current,
-      project2Ref.current,
-      project3Ref.current,
-    ];
+    // const projects = [
+    //   project1Ref.current,
+    //   project2Ref.current,
+    //   project3Ref.current,
+    // ];
 
-    projects.forEach((project, index) => {
-      gsap.fromTo(
-        project,
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: project,
-            start: "top bottom-=100",
-          },
-        }
-      );
-    });
+    // projects.forEach((project, index) => {
+    //   gsap.fromTo(
+    //     project,
+    //     {
+    //       y: 50,
+    //       opacity: 0,
+    //     },
+    //     {
+    //       y: 0,
+    //       opacity: 1,
+    //       duration: 1,
+    //       delay: 0.3 * (index + 1),
+    //       scrollTrigger: {
+    //         trigger: project,
+    //         start: "top bottom-=100",
+    //       },
+    //     }
+    //   );
+    // });
 
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
+    // gsap.fromTo(
+    //   sectionRef.current,
+    //   { opacity: 0 },
+    //   { opacity: 1, duration: 1.5 }
+    // );
   }, []);
 
   return (
@@ -54,7 +54,7 @@ const ShowcaseSection = () => {
           {/* Left */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/jobPortall.png" alt="ryde" />
+              <img src="https://res.cloudinary.com/dh2vwyyqj/image/upload/v1753253605/jobPortall_wb0n9o.png" alt="ryde" />
             </div>
             <div className="text-content">
               <h2>RAG based QABOT</h2>
@@ -73,14 +73,14 @@ const ShowcaseSection = () => {
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/jobPortal.png" alt="project3" className="w-full h-full"/>
+                <img src="https://res.cloudinary.com/dh2vwyyqj/image/upload/v1753254203/6976378_4565_y2vvhw.jpg" alt="project3" className=" "/>
               </div>
               <h2>Hiredd - A Job Portal</h2>
             </div>
 
             <div className="project">
               <div className="image-wrapper bg-[#ffebdf]">
-                <img src="/images/expenseTracker.png" alt="project2" className="object-cover"/>
+                <img src="https://res.cloudinary.com/dh2vwyyqj/image/upload/v1753254204/2605708_5306_cx3iui.jpg" alt="project2" className=""/>
               </div>
               <h2>Expense Tracker</h2>
             </div>

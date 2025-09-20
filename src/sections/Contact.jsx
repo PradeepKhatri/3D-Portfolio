@@ -1,8 +1,27 @@
 import { useState } from "react";
 import TitleHeader from "../components/Titleheader";
 import ContactExperience from "../components/Models/contact/ContactExperience";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollSmoother from "gsap/ScrollSmoother";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
+
 
 const Contact = () => {
+
+  useGSAP(()=> {
+    gsap.utils.toArray(".panel").forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+    });
+  },[])
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex-center section-padding">
+    <section id="contact" className="panel flex-center section-padding bg-[#FFFDF6] text-black-100">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader title="Get In Touch With Me" sub="Contact Information" />
 
@@ -96,7 +115,7 @@ const Contact = () => {
           {/* right side */}
           <div className="xl:col-span-6 min-h-96">
             <div className="bg-[#cd7c2e] w-full h-[90%] hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+              {/* <ContactExperience /> */}
             </div>
           </div>
 

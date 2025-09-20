@@ -6,19 +6,22 @@ import Footer from "./sections/Footer"
 import Hero from "./sections/Hero"
 import ShowcaseSection from "./sections/ShowcaseSection"
 import TechStack from "./sections/TechStack"
+import Layout from "./sections/Layout"
 
 const App = () => {
   return (
-    <>
+    // <>
+     <Layout>
       <NavBar />
       <Hero />
       <FeaturedCards />
       <ExperienceSection />
-      <ShowcaseSection />
+      {/* <ShowcaseSection /> */}
       <TechStack />
-      <Contact />
-      <Footer />
-    </>
+      {/* <Contact /> */}
+      {/* <Footer /> */}
+     </Layout>
+    // </>
   )
 }
 
